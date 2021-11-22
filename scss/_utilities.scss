@@ -1,0 +1,289 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins, sans-serif;
+  color: $dark-color;
+  margin: 0px 0px 16px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: $dark-grey-color;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+// Background
+.bg {
+  &-primary {
+    background-color: $primary-color;
+  }
+  &-dark {
+    background-color: $dark-color;
+  }
+  &-light {
+    background-color: $light-color;
+  }
+}
+
+// List
+
+ul {
+  list-style-type: none;
+}
+
+ul.disc {
+  display: block;
+  color: $dark-grey-color;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 0;
+  margin: 14px 0 14px 28px;
+  list-style-type: disc;
+
+  li {
+    display: list-item;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding-bottom: 4px;
+    text-align: left;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+
+.btn {
+  &-medium {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+  &-large {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+.btn {
+  &-primary {
+    @extend %btn-shared;
+    border: none;
+    color: $light-color;
+    background-color: $primary-color;
+
+    &:hover {
+      color: $primary-color;
+      background-color: $light-color;
+    }
+
+    &:focus {
+      color: $primary-color;
+      background-color: $light-color;
+    }
+
+    &-dark {
+      @extend %btn-shared;
+      border: none;
+      color: $light-color;
+      background-color: $primary-color;
+
+      &:hover {
+        color: $light-color;
+        background-color: $dark-color;
+      }
+
+      &:focus {
+        color: $light-color;
+        background-color: $dark-color;
+      }
+    }
+  }
+  &-light {
+    @extend %btn-shared;
+    border: none;
+    color: $dark-color;
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    border: none;
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-shared;
+  color: $light-color;
+  border: 1px solid;
+
+  &:hover {
+    color: $primary-color;
+    background-color: $light-color;
+    border: 1px solid transparent;
+  }
+}
+
+// Sections
+.section-title {
+  text-align: center;
+  color: $dark-color;
+  font-size: 42px;
+  font-size: 2.625rem;
+  display: block;
+  padding-bottom: 0rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+p.subtitle {
+  text-align: center;
+  font-size: 0.96875rem;
+  margin-bottom: 4.5rem;
+  padding: 0 14%;
+  text-transform: capitalize;
+  line-height: 2;
+}
+
+// BOXES
+// Box-item
+
+.boxes {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: transparent;
+
+  .box-item {
+    //display: flex;
+    //flex-direction: column;
+    padding: 10px 0 30px;
+
+    .icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 85px;
+      height: 85px;
+      border-radius: 100%;
+      background-color: $primary-color;
+      color: $light-color;
+      margin-bottom: 32px;
+      transition: all 0.4s ease;
+
+      i {
+        font-size: 45px;
+        font-size: 2.8125rem;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      letter-spacing: 0;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      //margin-bottom: 0.5rem;
+
+      a {
+        color: $dark-color;
+      }
+    }
+
+    p {
+      color: $light-grey-color;
+      margin-bottom: 0;
+      //padding-bottom: 6px;
+      font-size: 16px;
+    }
+    &:hover {
+      .icon {
+        background-color: $dark-color;
+      }
+
+      h3 a {
+        color: $primary-color;
+      }
+    }
+  }
+}
