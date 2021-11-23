@@ -77,6 +77,21 @@ h6 {
   }
 }
 
+.mt {
+  &-1 {
+    margin: 1rem 0 0;
+  }
+  &-2 {
+    margin: 2rem 0 0;
+  }
+  &-3 {
+    margin: 3rem 0 0;
+  }
+  &-4 {
+    margin: 4rem 0 0;
+  }
+}
+
 // Background
 .bg {
   &-primary {
@@ -190,14 +205,27 @@ ul.disc {
 }
 
 .btn-outlined {
-  @extend %btn-shared;
-  color: $light-color;
-  border: 1px solid;
+  &-light {
+    @extend %btn-shared;
+    color: $light-color;
+    border: 1px solid;
 
-  &:hover {
+    &:hover {
+      color: $primary-color;
+      background-color: $light-color;
+      border: 1px solid transparent;
+    }
+  }
+  &-primary {
+    @extend %btn-shared;
+    border: 1px solid;
+    background: transparent;
     color: $primary-color;
-    background-color: $light-color;
-    border: 1px solid transparent;
+
+    &:hover {
+      color: $light-color;
+      background: $primary-color;
+    }
   }
 }
 
@@ -220,6 +248,24 @@ p.subtitle {
   padding: 0 14%;
   text-transform: capitalize;
   line-height: 2;
+}
+
+// CTA
+.cta {
+  padding: 96px 24px;
+  background: $primary-color;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+
+  h2 {
+    color: $light-color;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.125;
+    text-transform: capitalize;
+    word-break: break-all;
+  }
 }
 
 // BOXES
